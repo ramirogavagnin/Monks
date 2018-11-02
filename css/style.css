@@ -1,0 +1,39 @@
+* {margin: 0;
+    box-sizing:border-box}
+
+
+
+
+#angle{
+font-size: 5rem; 
+color: white;
+position: fixed;
+z-index: 10000;
+right: 0;
+
+}
+
+
+.main-container{
+    height: 100vh;
+    width: 10000px;
+    background-color: #151515;
+
+}
+
+.slide-container{
+
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    width: 9000px;
+}
+#content{
+width: 1000px;
+height: 600px;
+background-color: transparent;
+top: 0;
+left: 0;
+position: fixed;
+}
