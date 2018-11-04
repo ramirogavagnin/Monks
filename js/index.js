@@ -1,6 +1,6 @@
 console.log('init app')
 
-var button = document.getElementById('angle')
+var button = document.getElementById('angle-right')
 
 button.addEventListener("click", function () {
     console.log('hiciste click')

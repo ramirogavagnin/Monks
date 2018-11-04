@@ -1,39 +1,275 @@
-* {margin: 0;
-    box-sizing:border-box}
+/* Fonts */
 
+@font-face {
+    font-family: bold;
+    src: url(../font/klavika-bold-webfont.woff);
+}
 
+@font-face {
+    font-family: medium;
+    src: url(../font/klavika-medium-webfont.woff);
+}
 
+@font-face {
+    font-family: regular;
+    src: url(../font/klavika-regular-webfont.woff);
+}
 
-#angle{
-font-size: 5rem; 
-color: white;
-position: fixed;
-z-index: 10000;
-right: 0;
+@font-face {
+    font-family: light;
+    src: url(../font/klavika-light-webfont.woff);
+}
+
+/* ------------- */
+
+/* General */
+
+* {
+    margin: 0;
+    box-sizing: border-box
+}
+
+h1 {
+    font-family: light;
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+}
+
+u {
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
+
+p {
+    color: white;
+    font-size: 0.7rem;
+    font-family: regular;
+    
+}
+
+a {
+    color: white;
 
 }
 
+.capitalize {
+    text-transform: capitalize;
+}
 
-.main-container{
+ul {
+    display: flex;
+    color: white;
+    list-style: none;
+    padding: 0 !important;
+}
+
+li {
+    border: 1px dotted white;
+    height: 1rem;
+    width: 1.3rem;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-size: 0.7rem;
+    font-family: regular;
+}
+
+.opacity0{
+opacity: 0;
+transition: all 200ms;
+}
+
+.opacity1{
+    opacity: 1;
+transition: all 200ms;
+}
+
+
+/* ------------- */
+
+/* Main */
+
+.main-container {
     height: 100vh;
     width: 10000px;
-    background-color: #151515;
-
+    background-color: black;
 }
 
-.slide-container{
-
+.background-container {
     background-image: url('../images/background.jpg');
     background-size: cover;
     background-position: center center;
     height: 100vh;
     width: 9000px;
 }
-#content{
-width: 1000px;
-height: 600px;
-background-color: transparent;
-top: 0;
-left: 0;
-position: fixed;
+
+.fixed-container {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
 }
+
+/* CONTENT */
+
+.header {
+    height: 33.3%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.1rem;
+}
+
+.body {
+    height: 33.3%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-body {
+    margin: 0 4rem;  
+    position: absolute;
+}
+
+.footer {
+    height: 33.3%;
+    display: flex;
+}
+
+.left-body {
+    display: flex;
+    width: 50%;
+}
+
+.right-body {
+    display: flex;
+    width: 50%;
+}
+
+.aling-right-body{
+text-align: right;
+    right: 0;
+}
+
+.left-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.right-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 50%;
+}
+
+.text-footer-up{
+    margin-bottom: 2.5rem; 
+    margin-left: 1.4rem;
+}
+
+.footer-list{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 1.5rem; 
+    margin-left: 1.4rem;
+}
+
+
+.footer-text-container{
+
+display: flex;
+align-items: flex-end;
+}
+
+.text-footer-right{
+position: absolute;
+    margin-left: 1rem;
+}
+
+
+.li-text{
+    color: transparent;
+    background-color: white;
+    height: 75%;
+    width: 80%;  
+}
+
+#cero {
+    color: transparent;  
+}
+
+#nine{
+    color: transparent;
+    }
+
+.contact{
+    text-align: right;
+    right: 0;
+    position: absolute;
+    margin: 2rem 1rem;  
+}
+
+.social-media{
+    display: flex;
+   align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+   
+}
+
+.social-style {
+    color: white;
+    font-size: 0.7rem !important;
+    font-family: regular;
+    
+}
+
+.media{
+    display: flex;
+}
+
+.media-text {
+    margin-left: 0.3rem;
+    margin-right: 0.6rem;
+    margin-bottom: 5rem;
+
+}
+
+
+/* ICONS */
+
+.angles {
+    font-size: 4rem;
+    color: white;
+    position: fixed;
+    z-index: 10000;
+}
+
+#angle-left {
+    margin-left: 0.8rem;
+    left: 0;
+}
+
+#angle-right {
+    right: 0;
+    margin-right: 0.8rem;
+}
+
+.logo{
+    height: 2.5rem;
+    width: 5rem; 
+    margin: 1.5rem 1rem;
+}
+
+/* ----------- */
+
+
+
