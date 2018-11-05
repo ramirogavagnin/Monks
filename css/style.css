@@ -46,12 +46,10 @@ p {
     color: white;
     font-size: 0.7rem;
     font-family: regular;
-    
 }
 
 a {
     color: white;
-
 }
 
 .capitalize {
@@ -70,23 +68,22 @@ li {
     height: 1rem;
     width: 1.3rem;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     font-size: 0.7rem;
     font-family: regular;
     z-index: 10000;
 }
 
-.opacity0{
-opacity: 0 !important;
-transition: all 500ms;
+.opacity0 {
+    opacity: 0 !important;
+    transition: all 500ms;
 }
 
-.opacity1{
+.opacity1 {
     opacity: 1 !important;
-transition: all 1300ms;
+    transition: all 1300ms;
 }
-
 
 /* ------------- */
 
@@ -133,7 +130,7 @@ transition: all 1300ms;
 }
 
 .text-body {
-    margin: 0 4rem;  
+    margin: 0 4rem;
     position: absolute;
 }
 
@@ -152,8 +149,8 @@ transition: all 1300ms;
     width: 50%;
 }
 
-.aling-right-body{
-text-align: right;
+.aling-right-body {
+    text-align: right;
     right: 0;
 }
 
@@ -171,69 +168,64 @@ text-align: right;
     width: 50%;
 }
 
-.text-footer-up{
-    margin-bottom: 2.5rem; 
+.text-footer-up {
+    margin-bottom: 2.5rem;
     margin-left: 1.4rem;
 }
 
-.footer-list{
+.footer-list {
     display: flex;
     align-items: flex-end;
-    margin-bottom: 1.5rem; 
+    margin-bottom: 1.5rem;
     margin-left: 1.4rem;
 }
 
-
-.footer-text-container{
-
-display: flex;
-align-items: flex-end;
+.footer-text-container {
+    display: flex;
+    align-items: flex-end;
 }
 
-.text-footer-right{
-position: absolute;
+.text-footer-right {
+    position: absolute;
     margin-left: 1rem;
 }
 
-
-.li-text{
+.li-text {
     color: transparent;
     background-color: white;
     height: 75%;
-    width: 80%;  
+    width: 80%;
 }
 
 #cero {
-    color: transparent;  
+    color: transparent;
 }
 
-#nine{
+#nine {
     color: transparent;
-    }
+}
 
-.contact{
+.contact {
     text-align: right;
     right: 0;
     position: absolute;
-    margin: 2rem 1rem;  
+    margin: 2rem 1rem;
 }
 
-.social-media{
+.social-media {
     display: flex;
-   align-items: flex-end;
+    align-items: flex-end;
     justify-content: flex-end;
     width: 100%;
-   
 }
 
 .social-style {
     color: white;
     font-size: 0.7rem !important;
     font-family: regular;
-    
 }
 
-.media{
+.media {
     display: flex;
 }
 
@@ -241,9 +233,7 @@ position: absolute;
     margin-left: 0.3rem;
     margin-right: 0.6rem;
     margin-bottom: 5rem;
-
 }
-
 
 /* ICONS */
 
@@ -264,13 +254,126 @@ position: absolute;
     margin-right: 0.8rem;
 }
 
-.logo{
+.logo {
     height: 2.5rem;
-    width: 5rem; 
+    width: 5rem;
     margin: 1.5rem 1rem;
 }
 
 /* ----------- */
 
+/* PRELOAD */
 
+#preload {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 100001;
+    color: white;
+    display: block;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.z-index {
+    z-index: 0 !important;
+}
+
+#padawan {
+    height: 7.5rem;
+    width: 5.5rem;
+    animation-name: floating;
+    animation-duration: 1200ms;
+    animation-iteration-count: infinite;
+    transition: all;
+}
+
+#loader-text{
+    font-size: 1rem;
+    font-family: light;
+    font-weight: 100;
+    font-style: italic;
+    margin-top: 2rem;
+}
+
+.opacity-1-preload {
+animation-name: opacity;
+animation-duration: 500ms;
+transition: all ;
+
+}
+
+@keyframes opacity {
+0% {  opacity: 0;}
+25% {  opacity: 0.25;}
+50% {  opacity: 0.50;}
+75% {  opacity: 0.75;}
+100% {  opacity: 1;}
+
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+    5% {
+        transform: translateY(1px);
+    }
+    15% {
+        transform: translateY(2px);
+    }
+    20% {
+        transform: translateY(3px);
+    }
+    25% {
+        transform: translateY(4px);
+    }
+    30% {
+        transform: translateY(5px);
+    }
+    35% {
+        transform: translateY(6px);
+    }
+    40% {
+        transform: translateY(7px);
+    }
+    45% {
+        transform: translateY(8px);
+    }
+    50% {
+        transform: translateY(7px);
+    }
+    55% {
+        transform: translateY(6px);
+    }
+    60% {
+        transform: translateY(5px);
+    }
+    65% {
+        transform: translateY(4px);
+    }
+    70% {
+        transform: translateY(3px);
+    }
+    75% {
+        transform: translateY(2px);
+    }
+    80% {
+        transform: translateY(1px);
+    }
+    85% {
+        transform: translateY(0px);
+    }
+    90% {
+        transform: translateY(-1px);
+    }
+    95% {
+        transform: translateY(-2px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}

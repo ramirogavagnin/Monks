@@ -1,10 +1,50 @@
 console.log('init app')
 
+
+//////// PreLoad ////////
+
+var preload = document.getElementById('preload')
+var loading = 0
+
+
+setTimeout(function(){ 
+    var padawanNode = document.getElementById('padawan')
+    padawanNode.classList.remove('opacity0')
+    padawanNode.classList.add('opacity-1-preload')
+}, 500)
+
+setTimeout(function(){ 
+    var textLoaderNode = document.getElementById('loader-text')
+    textLoaderNode.classList.remove('opacity0')
+    textLoaderNode.classList.add('opacity-1-preload')
+}, 600)
+
+var id = setInterval(preLoader, 64)
+
+function preLoader() {
+    if (loading == 100) {
+        clearInterval(id)
+    } else {
+        loading += 2
+
+        if (loading == 90) {
+            preload.classList.add('opacity0')
+            preload.classList.add('z-index')
+        }
+
+    }
+} 
+
+
+
+/////// ================================== //////
+
+
+
+
 var rightButtonNode = document.getElementById('angle-right')
 
 var leftButtonNode = document.getElementById('angle-left')
-
-
 
 
 rightButtonNode.addEventListener("click", function () {
