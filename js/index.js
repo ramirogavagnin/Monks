@@ -1,13 +1,13 @@
 console.log('init app')
 
-var rightButton = document.getElementById('angle-right')
+var rightButtonNode = document.getElementById('angle-right')
 
-var leftButton = document.getElementById('angle-left')
-
-
+var leftButtonNode = document.getElementById('angle-left')
 
 
-rightButton.addEventListener("click", function (event) {
+
+
+rightButtonNode.addEventListener("click", function () {
 
     var scroll = window.scrollX
 
@@ -375,13 +375,18 @@ rightButton.addEventListener("click", function (event) {
 
 
 
-// ====================================================
+
+
+// =========================================================================
+
+
 
 
 /* LEFT ANGLE */
 
 
-leftButton.addEventListener("click", function () {
+
+leftButtonNode.addEventListener("click", function () {
     var scroll = window.scrollX
     
 
@@ -400,10 +405,14 @@ leftButton.addEventListener("click", function () {
         function addRemove() {
             var elementsToOpacity0 = document.getElementsByClassName('one')
             var elementsToOpacity1 = document.getElementsByClassName('cero')
-            var counter = document.getElementById('text-one')
+            var counterRemove = document.getElementById('text-one')
+            var counterAdd = document.getElementById('text-cero')
             var angleLeftRemove = document.getElementById('angle-left')
-            counter.classList.remove('li-text')
+            counterRemove.classList.remove('li-text')
+            counterAdd.classList.add('li-text')
             angleLeftRemove.classList.remove('opacity1')
+            angleLeftRemove.classList.add('opacity0')
+
 
             for (var i = 0; i < elementsToOpacity0.length; i++) {
                 elementsToOpacity0[i].classList.remove('opacity1')
@@ -747,4 +756,134 @@ leftButton.addEventListener("click", function () {
 
 
 })
+
+
+// ======================================================
+
+////// Counter ///////
+
+
+var spanNodes = document.getElementsByTagName('span')
+
+for (var i = 0; i < spanNodes.length; i++) {
+spanNodes[i].addEventListener("click", function(event){
+
+    var id = event.target.id
+    var scroll = window.scrollX
+
+  
+      //// To End  ////
+   
+    if (scroll === 0 || scroll < 800) {
+        
+        switch (id){
+case 'text-nine': 
+        var i = 300
+        var int = setInterval(function () {
+        window.scrollTo(i, 0)
+        i += 140
+        if (i >= 8560) clearInterval(int)
+        }, 30, addRemove())
+
+        function addRemove() {
+            var elementsToOpacity0 = document.getElementsByClassName('all')
+            var elementsToOpacity1 = document.getElementsByClassName('nine')
+            var counterRemove = document.getElementById('text-cero')
+            var counterAdd = document.getElementById('text-nine')
+            var angleRightRemove = document.getElementById('angle-right')
+            var angleLeftAdd = document.getElementById('angle-left')
+            counterRemove.classList.remove('li-text')
+            angleRightRemove.classList.remove('opacity1')
+            angleRightRemove.classList.add('opacity0')
+            
+            for (var i = 0; i < elementsToOpacity0.length; i++) {
+                elementsToOpacity0[i].classList.remove('opacity1')
+            }
+
+            for (var i = 0; i < elementsToOpacity0.length; i++) {
+                elementsToOpacity0[i].classList.add('opacity0')
+            }
+            
+            
+            setTimeout(function(){counterAdd.classList.add('li-text') 
+            angleLeftAdd.classList.remove('opacity0')
+            angleLeftAdd.classList.add('opacity1') 
+            for (var i = 0; i < elementsToOpacity1.length; i++) {
+                elementsToOpacity1[i].classList.remove('opacity0')
+            }
+
+            for (var i = 0; i < elementsToOpacity1.length; i++) {
+                elementsToOpacity1[i].classList.add('opacity1')
+            }}, 1700)
+            
+
+        }
+
+
+break
+
+        }
+    }
+
+     
+    
+    
+    
+    //// To Start  ////
+    
+    if (scroll === 8560 || (scroll > 7960 && scroll < 8450)) {
+        
+        switch (id){
+case 'text-cero': 
+        var i = 8560 
+        var int = setInterval(function () {
+        window.scrollTo(i, 0)
+        i -= 140
+        if (i <= 0) clearInterval(int)
+        }, 30, addRemove())
+
+        function addRemove() {
+            var elementsToOpacity0 = document.getElementsByClassName('all')
+            var elementsToOpacity1 = document.getElementsByClassName('cero')
+            var counterRemove = document.getElementById('text-nine')
+            var counterAdd = document.getElementById('text-cero')
+            var angleLeftRemove = document.getElementById('angle-left')
+            var angleRightAdd = document.getElementById('angle-right')
+            counterRemove.classList.remove('li-text')
+            angleLeftRemove.classList.remove('opacity1')
+            angleLeftRemove.classList.add('opacity0')
+            
+            for (var i = 0; i < elementsToOpacity0.length; i++) {
+                elementsToOpacity0[i].classList.remove('opacity1')
+            }
+
+            for (var i = 0; i < elementsToOpacity0.length; i++) {
+                elementsToOpacity0[i].classList.add('opacity0')
+            }
+            
+            
+            setTimeout(function(){counterAdd.classList.add('li-text') 
+            angleRightAdd.classList.remove('opacity0')
+            angleRightAdd.classList.add('opacity1') 
+            for (var i = 0; i < elementsToOpacity1.length; i++) {
+                elementsToOpacity1[i].classList.remove('opacity0')
+            }
+
+            for (var i = 0; i < elementsToOpacity1.length; i++) {
+                elementsToOpacity1[i].classList.add('opacity1')
+            }}, 1700)
+            
+
+        }
+
+
+break
+
+        }
+    }
+
+})
+
+}
+
 
